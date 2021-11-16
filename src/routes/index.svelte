@@ -13,7 +13,7 @@
 
 <div id="wrapper">
     <div id="img-wrapper">
-        <img id="logo" src="/logo.png" alt="AIMS" />
+        <img id="logo" src="logo.png" alt="AIMS" />
     </div>
     <main>
         <article class={mounted ? "fade-in" : ""}>
@@ -42,7 +42,7 @@
             <h1>Our Team</h1>
             <div class="member">
                 <img
-                    src="/profiles/charles-jolin-landry.jpg"
+                    src="profiles/charles-jolin-landry.jpg"
                     alt="Charles Jolin-Landry"
                 />
                 <div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="member">
-                <img src="/profiles/anesh-pillai.jpg" alt="Anesh Pillai" />
+                <img src="profiles/anesh-pillai.jpg" alt="Anesh Pillai" />
                 <div>
                     <h3>Anesh Pillai</h3>
                     <p>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="member">
-                <img src="/profiles/trevor-richard.jpg" alt="Trevor Richard" />
+                <img src="profiles/trevor-richard.jpg" alt="Trevor Richard" />
                 <div>
                     <h3>Trevor Richard</h3>
                     <p>
