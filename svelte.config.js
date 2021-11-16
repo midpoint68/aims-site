@@ -15,6 +15,7 @@ const config = {
 		paths: {
 			base: dev ? '' : '/aims-site',
 		},
+		appDir: 'internal',
 		adapter: adapter({
 			// default options are shown
 			pages: 'docs',
