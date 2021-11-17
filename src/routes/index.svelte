@@ -182,8 +182,8 @@
 
     .member > img {
         margin-right: 2em;
-        width: 80px;
-        height: 80px;
+        width:  96px;
+        height:  96px;
         border-radius: 50%;
         image-rendering: optimizeQuality;
         box-shadow: 2px 2px 7px #ccc;
