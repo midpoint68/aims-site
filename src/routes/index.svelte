@@ -37,6 +37,15 @@
                     substance reports.
                 </p>
             </div>
+            <div class="promise">
+                <h3>
+                    <i class="icofont-lock" /> Keep Your Data Safe
+                </h3>
+                <p>
+                    Your privacy is our concern and AIMS will never leverage or
+                    sell the data that you trust with us.
+                </p>
+            </div>
         </article>
         <article class={mounted ? "fade-in" : ""}>
             <h1>Our Team</h1>
@@ -64,7 +73,8 @@
                     <p>
                         Anesh is a business owner and project manager with
                         experience in both technological fields and logistics.
-                        Add additional info here...
+                        He leverages his experience in team management to bring
+                        goals to realities.
                     </p>
                 </div>
             </div>
@@ -73,8 +83,8 @@
                 <div>
                     <h3>Trevor Richard</h3>
                     <p>
-                        Trevor Richard is a full-stack website developer and
-                        avid programmer who focuses on the creative side of
+                        Trevor is a full-stack website developer and avid
+                        programmer who focuses on the creative side of
                         technology and human computer interaction in web
                         development.
                     </p>
@@ -182,8 +192,8 @@
 
     .member > img {
         margin-right: 2em;
-        width:  96px;
-        height:  96px;
+        width: 96px;
+        height: 96px;
         border-radius: 50%;
         image-rendering: optimizeQuality;
         box-shadow: 2px 2px 7px #ccc;
