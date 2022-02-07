@@ -1,7 +1,10 @@
 <script type="ts">
     import { onMount } from "svelte";
 
-    import Header from "../components/Header.svelte";
+    import Header from "$src/components/Header.svelte";
+
+    // Booking Link
+    const bookingLink = "";
 
     let mounted = false;
     onMount(() => {
@@ -16,6 +19,14 @@
         <img id="logo" src="logo.png" alt="AIMS" />
     </div>
     <main>
+        <article class={mounted ? "fade-in" : ""}>
+            <div class="promise">
+                <h3><i class="icofont-search-2" /> Discover AIMS!</h3>
+                <p>
+                    We are now offering <a href="#booking">flexible bookings</a> to meet with our team members!
+                </p>
+            </div>
+        </article>
         <article class={mounted ? "fade-in" : ""}>
             <h1>We aim to...</h1>
             <div class="promise">
@@ -91,6 +102,23 @@
                 </div>
             </div>
         </article>
+        <article class={mounted ? "fade-in" : ""}>
+            <h1>Discover AIMS</h1>
+            <div id="booking">
+                <div>
+                    <p>
+                        We are looking to discover more about the alcohol industry and the difficulties that businesses face on a daily basis. We want to hear what <i>you</i> are looking for to improve your business, and are offering flexible bookings with our team members to discuss how we can help you reach your goals. <a href={bookingLink}>Book a meeting now!</a>
+                    </p>
+                    <p>
+                        Looking forward to talking with you,<br>
+                        <strong>The AIMS Team</strong>
+                    </p>
+                </div>
+                <div>
+                    <a href={bookingLink} id="booking-link"><button>Book a Discovery Meeting!</button></a>
+                </div>
+            </div>
+        </article>
     </main>
 </div>
 
@@ -121,8 +149,22 @@
     #logo {
         max-width: 80%;
     }
+    #booking-link {
+        text-decoration: none;
+        display: inline-block;
+        margin: 1rem 0;
+    }
+    #booking-link>button {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
+        font-weight: bold;
+        font-size: 18px;
+        padding: 1rem 1rem;
+        border-radius: 0.25rem;
+    }
     main {
         padding: 0 25%;
+        padding-bottom: 10rem;
     }
     article {
         position: relative;

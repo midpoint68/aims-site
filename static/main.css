@@ -20,3 +20,16 @@ body{
     color: var(--text-color);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+a {
+    color: var(--accent-color);
+}
+a:visited {
+    color: var(--accent-color);
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
+import path from 'path';
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -12,16 +13,20 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		paths: {
-			base: dev ? '' : '/aims-site',
-		},
 		appDir: 'internal',
 		adapter: adapter({
 			// default options are shown
 			pages: 'docs',
 			assets: 'docs',
 			fallback: null
-		})
+		}),
+		vite: {
+			resolve: {
+				alias: {
+					$src: path.resolve('./src')
+				}
+			}
+		}
 	}
 };
 
