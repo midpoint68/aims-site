@@ -1,10 +1,8 @@
 <script type="ts">
     import { onMount } from "svelte";
 
-    import Header from "$src/components/Header.svelte";
-
     // Booking Link
-    const bookingLink = "";
+    const bookingLink = "https://outlook.office365.com/owa/calendar/AIMS1@bitmotek.ca/bookings/";
 
     let mounted = false;
     onMount(() => {
@@ -12,9 +10,7 @@
     });
 </script>
 
-<Header />
-
-<div id="wrapper">
+<div id="container">
     <div id="img-wrapper">
         <img id="logo" src="logo.png" alt="AIMS" />
     </div>
@@ -28,7 +24,7 @@
             </div>
         </article>
         <article class={mounted ? "fade-in" : ""}>
-            <h1>We aim to...</h1>
+            <h1>We Aim to...</h1>
             <div class="promise">
                 <h3><i class="icofont-clock-time" /> Save You Time</h3>
                 <p>
@@ -58,7 +54,7 @@
                 </p>
             </div>
         </article>
-        <article class={mounted ? "fade-in" : ""}>
+        <article id="team" class={mounted ? "fade-in" : ""}>
             <h1>Our Team</h1>
             <div class="member">
                 <img
@@ -102,9 +98,9 @@
                 </div>
             </div>
         </article>
-        <article class={mounted ? "fade-in" : ""}>
+        <article id="booking" class={mounted ? "fade-in" : ""}>
             <h1>Discover AIMS</h1>
-            <div id="booking">
+            <div>
                 <div>
                     <p>
                         We are looking to discover more about the alcohol industry and the difficulties that businesses face on a daily basis. We want to hear what <i>you</i> are looking for to improve your business, and are offering flexible bookings with our team members to discuss how we can help you reach your goals. <a href={bookingLink}>Book a meeting now!</a>
@@ -123,19 +119,9 @@
 </div>
 
 <style>
-    #wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    #container {
         overflow: auto;
-        background-image: radial-gradient(
-            farthest-side at center 20%,
-            var(--bg-color) 0,
-            var(--bg-color) 30%,
-            var(--shadow-color) 100%
-        );
+        flex-grow: 1;
     }
     #img-wrapper {
         height: 30%;
@@ -172,7 +158,8 @@
         top: 160px;
         transition: all 1.2s ease-out;
         margin-bottom: 5em;
-        margin-top: 2em;
+        margin-top: 1em;
+        padding-top: 1em;
     }
     article.fade-in {
         opacity: 1;
@@ -187,18 +174,18 @@
         background: linear-gradient(
             to right,
             #eee0,
-            var(--shadow-color),
+            var(--bg-color),
             #eee0
         );
         color: var(--text-color);
-        text-shadow: 2px 2px 1px var(--bg-color);
+        text-shadow: 1px 1px 1px #ccc;
         border-top: 2px solid var(--accent-color);
         border-bottom: 2px solid var(--accent-color);
     }
 
     .promise {
         border-radius: 3px;
-        margin: 1em;
+        margin: 1em 0.2em;
         overflow: hidden;
         border: 1px solid var(--accent-color);
     }
@@ -264,11 +251,13 @@
 
     @media screen and (max-width: 640px) {
         #img-wrapper {
-            height: 20%;
+            height: 15%;
+            padding: 3em;
+            padding-bottom: 0;
         }
 
         #logo {
-            max-width: 100%;
+            max-width: 80%;
         }
 
         main {

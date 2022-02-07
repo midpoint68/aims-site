@@ -11,15 +11,16 @@
 
 		
 
-		<link rel="modulepreload" href="/internal/start-2aaa260a.js">
-		<link rel="modulepreload" href="/internal/chunks/vendor-7ff61564.js">
-		<link rel="modulepreload" href="/internal/layout.svelte-284a9cbf.js">
-		<link rel="modulepreload" href="/internal/pages/index.svelte-6f37e387.js">
+		<link rel="modulepreload" href="/internal/start-0378c450.js">
+		<link rel="modulepreload" href="/internal/chunks/vendor-1c11229d.js">
+		<link rel="modulepreload" href="/internal/pages/__layout.svelte-861b9560.js">
+		<link rel="modulepreload" href="/internal/pages/index.svelte-2fb51300.js">
 		<link rel="stylesheet" href="/internal/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/internal/assets/pages/index.svelte-121f6d5b.css">
+		<link rel="stylesheet" href="/internal/assets/pages/__layout.svelte-084fc668.css">
+		<link rel="stylesheet" href="/internal/assets/pages/index.svelte-aa4eaa3c.css">
 
 		<script type="module">
-			import { start } from "/internal/start-2aaa260a.js";
+			import { start } from "/internal/start-0378c450.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -32,8 +33,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/internal/layout.svelte-284a9cbf.js"),
-						import("/internal/pages/index.svelte-6f37e387.js")
+						import("/internal/pages/__layout.svelte-861b9560.js"),
+						import("/internal/pages/index.svelte-2fb51300.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -50,33 +51,40 @@
 	<div id="svelte">
 
 
+<div id="wrapper" class="svelte-102u67y">
 
 
-<div id="wrapper" class="svelte-1uqn93y"><div id="img-wrapper" class="svelte-1uqn93y"><img id="logo" src="logo.png" alt="AIMS" class="svelte-1uqn93y"></div>
-    <main class="svelte-1uqn93y"><article class=" svelte-1uqn93y"><div class="promise svelte-1uqn93y"><h3 class="svelte-1uqn93y"><i class="icofont-search-2 svelte-1uqn93y"></i> Discover AIMS!</h3>
-                <p class="svelte-1uqn93y">We are now offering <a href="#booking">flexible bookings</a> to meet with our team members!
+
+<header class="svelte-t1xz6u"><nav class="svelte-t1xz6u"><a href="/"><img id="logo" src="logo.png" alt="AIMS" class="svelte-t1xz6u"></a>
+        <div id="mobile-links" class="svelte-t1xz6u"><i class="icofont-navigation-menu"></i></div>
+        <div id="links" class="svelte-t1xz6u"><a class="link svelte-t1xz6u" href="/#team">Team</a>
+            <a class="link svelte-t1xz6u" href="/#booking">Discover</a></div></nav>
+</header>
+  <div id="container" class="svelte-uwsp3n"><div id="img-wrapper" class="svelte-uwsp3n"><img id="logo" src="logo.png" alt="AIMS" class="svelte-uwsp3n"></div>
+    <main class="svelte-uwsp3n"><article class=" svelte-uwsp3n"><div class="promise svelte-uwsp3n"><h3 class="svelte-uwsp3n"><i class="icofont-search-2 svelte-uwsp3n"></i> Discover AIMS!</h3>
+                <p class="svelte-uwsp3n">We are now offering <a href="#booking">flexible bookings</a> to meet with our team members!
                 </p></div></article>
-        <article class=" svelte-1uqn93y"><h1 class="svelte-1uqn93y">We aim to...</h1>
-            <div class="promise svelte-1uqn93y"><h3 class="svelte-1uqn93y"><i class="icofont-clock-time svelte-1uqn93y"></i> Save You Time</h3>
-                <p class="svelte-1uqn93y">We provide accurate and real time inventory management of
+        <article class=" svelte-uwsp3n"><h1 class="svelte-uwsp3n">We Aim to...</h1>
+            <div class="promise svelte-uwsp3n"><h3 class="svelte-uwsp3n"><i class="icofont-clock-time svelte-uwsp3n"></i> Save You Time</h3>
+                <p class="svelte-uwsp3n">We provide accurate and real time inventory management of
                     controlled substances in your business so you can focus less
                     on the process and more on the product.
                 </p></div>
-            <div class="promise svelte-1uqn93y"><h3 class="svelte-1uqn93y"><i class="icofont-chart-growth svelte-1uqn93y"></i> Optimize Your Operations
+            <div class="promise svelte-uwsp3n"><h3 class="svelte-uwsp3n"><i class="icofont-chart-growth svelte-uwsp3n"></i> Optimize Your Operations
                 </h3>
-                <p class="svelte-1uqn93y">We integrate data management seamlessly into your
+                <p class="svelte-uwsp3n">We integrate data management seamlessly into your
                     productions process to optimize your production time and
                     provide streamlined methods of generating controlled
                     substance reports.
                 </p></div>
-            <div class="promise svelte-1uqn93y"><h3 class="svelte-1uqn93y"><i class="icofont-lock svelte-1uqn93y"></i> Keep Your Data Safe
+            <div class="promise svelte-uwsp3n"><h3 class="svelte-uwsp3n"><i class="icofont-lock svelte-uwsp3n"></i> Keep Your Data Safe
                 </h3>
-                <p class="svelte-1uqn93y">Your privacy is our concern and AIMS will never leverage or
+                <p class="svelte-uwsp3n">Your privacy is our concern and AIMS will never leverage or
                     sell the data that you trust with us.
                 </p></div></article>
-        <article class=" svelte-1uqn93y"><h1 class="svelte-1uqn93y">Our Team</h1>
-            <div class="member svelte-1uqn93y"><img src="profiles/charles-jolin-landry.jpg" alt="Charles Jolin-Landry" class="svelte-1uqn93y">
-                <div class="svelte-1uqn93y"><h3 class="svelte-1uqn93y">Charles Jolin-Landry</h3>
+        <article id="team" class=" svelte-uwsp3n"><h1 class="svelte-uwsp3n">Our Team</h1>
+            <div class="member svelte-uwsp3n"><img src="profiles/charles-jolin-landry.jpg" alt="Charles Jolin-Landry" class="svelte-uwsp3n">
+                <div class="svelte-uwsp3n"><h3 class="svelte-uwsp3n">Charles Jolin-Landry</h3>
                     <p>Charles earned a Master’s degree in mathematics from the
                         University of British Columbia and founded Bitmotek
                         Optimization Ltd. with the purpose of bringing
@@ -84,25 +92,26 @@
                         solving logistical and combinatorial problems standing
                         in the way of growth and efficiencies.
                     </p></div></div>
-            <div class="member svelte-1uqn93y"><img src="profiles/anesh-pillai.jpg" alt="Anesh Pillai" class="svelte-1uqn93y">
-                <div class="svelte-1uqn93y"><h3 class="svelte-1uqn93y">Anesh Pillai</h3>
+            <div class="member svelte-uwsp3n"><img src="profiles/anesh-pillai.jpg" alt="Anesh Pillai" class="svelte-uwsp3n">
+                <div class="svelte-uwsp3n"><h3 class="svelte-uwsp3n">Anesh Pillai</h3>
                     <p>Anesh is a business owner and project manager with
                         experience in both technological fields and logistics.
                         He leverages his experience in team management to bring
                         goals to realities.
                     </p></div></div>
-            <div class="member svelte-1uqn93y"><img src="profiles/trevor-richard.jpg" alt="Trevor Richard" class="svelte-1uqn93y">
-                <div class="svelte-1uqn93y"><h3 class="svelte-1uqn93y">Trevor Richard</h3>
+            <div class="member svelte-uwsp3n"><img src="profiles/trevor-richard.jpg" alt="Trevor Richard" class="svelte-uwsp3n">
+                <div class="svelte-uwsp3n"><h3 class="svelte-uwsp3n">Trevor Richard</h3>
                     <p>Trevor is a full-stack website developer and avid
                         programmer who focuses on the creative side of
                         technology and human computer interaction in web
                         development.
                     </p></div></div></article>
-        <article class=" svelte-1uqn93y"><h1 class="svelte-1uqn93y">Discover AIMS</h1>
-            <div id="booking"><div><p>We are looking to discover more about the alcohol industry and the difficulties that businesses face on a daily basis. We want to hear what <i>you</i> are looking for to improve your business, and are offering flexible bookings with our team members to discuss how we can help you reach your goals. <a href="">Book a meeting now!</a></p>
+        <article id="booking" class=" svelte-uwsp3n"><h1 class="svelte-uwsp3n">Discover AIMS</h1>
+            <div><div><p>We are looking to discover more about the alcohol industry and the difficulties that businesses face on a daily basis. We want to hear what <i>you</i> are looking for to improve your business, and are offering flexible bookings with our team members to discuss how we can help you reach your goals. <a href="https://outlook.office365.com/owa/calendar/AIMS1@bitmotek.ca/bookings/">Book a meeting now!</a></p>
                     <p>Looking forward to talking with you,<br>
                         <strong>The AIMS Team</strong></p></div>
-                <div><a href="" id="booking-link" class="svelte-1uqn93y"><button class="svelte-1uqn93y">Book a Discovery Meeting!</button></a></div></div></article></main>
+                <div><a href="https://outlook.office365.com/owa/calendar/AIMS1@bitmotek.ca/bookings/" id="booking-link" class="svelte-uwsp3n"><button class="svelte-uwsp3n">Book a Discovery Meeting!</button></a></div></div></article></main>
+</div>
 </div>
 
 
