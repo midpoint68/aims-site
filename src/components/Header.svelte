@@ -1,6 +1,4 @@
 <script type="ts">
-import { stop_propagation } from "svelte/internal";
-
     export let title = "AIMS - Alcohol Inventory Management System";
     let showMenu = false;
 </script>
