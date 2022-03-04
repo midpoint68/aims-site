@@ -3,7 +3,8 @@
 :root{
     --bg-color: white;
     --bg-color-2: #eee;
-    --shadow-color: #4442;
+    --bg-color-3: #444;
+    --shadow-color: #2224;
     --text-color: black;
     --accent-color: dodgerblue;
 }

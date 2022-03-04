@@ -5,6 +5,22 @@
     // Booking Link
     const bookingLink = "https://outlook.office365.com/owa/calendar/AIMS1@bitmotek.ca/bookings/";
 
+    // Get image links
+    const mockups = [
+      "mockups/batch_report_template.png",
+      "mockups/batch_report_document.png",
+      "mockups/production_report_template.png",
+      "mockups/production_report_document.png",
+      "mockups/receiving_alcohol_template.png",
+      "mockups/receiving_alcohol_document.png",
+      "mockups/shipping_form_template.png",
+      "mockups/shipping_form_document.png"
+    ];
+    let mockupFullscreen = false;
+    let mockupIndex = 0;
+    $: if(mockupIndex < 0) mockupIndex = mockups.length - 1;
+    $: if(mockupIndex >= mockups.length) mockupIndex = 0;
+
     let mounted = false;
     onMount(() => {
         mounted = true;
@@ -55,6 +71,26 @@
                         Your privacy is our concern and AIMS will never leverage or
                         sell the data that you trust with us.
                     </p>
+                </div>
+            </article>
+            <article id="platform" class={mounted ? "fade-in" : ""}>
+                <h1>Our Platform</h1>
+                <p>
+                    We aim to provide a platform that gives you the flexibility you need in your reports while maintaning the integrity, privacy, and accuracy of your production data. With customizable templates and field contraints, AIMS is designed to grow with your business and adapt to any changes in your process:
+                </p>
+                <div id="carousel" class:fullscreen={mockupFullscreen}>
+                    <div class="prev" on:click={()=>mockupIndex--}>
+                        <i class="icofont-circled-left"></i>
+                    </div>
+                    <div class="item">
+                        <img src={mockups[mockupIndex]} alt="" on:click={()=>mockupFullscreen=true}>
+                    </div>
+                    <div class="next" on:click={()=>mockupIndex++}>
+                        <i class="icofont-circled-right"></i>
+                    </div>
+                    <div class="close" on:click={()=>mockupFullscreen = !mockupFullscreen}>
+                        <i class="icofont-close"></i>
+                    </div>
                 </div>
             </article>
             <article id="team" class={mounted ? "fade-in" : ""}>
@@ -169,9 +205,8 @@
         padding: 1rem 1rem;
         border-radius: 0.25rem;
     }
-    main {
+    main > article {
         padding: 0 25%;
-        padding-bottom: 10rem;
     }
     article {
         position: relative;
@@ -258,14 +293,92 @@
         color: var(--accent-color);
     }
 
+    /* Carousel */
+    #carousel {
+        overflow: visible;
+        background-color: var(--bg-color-3);
+        box-shadow: inset 2px 2px 7px var(--shadow-color);
+        width: 100%;
+        position: relative;
+        border-radius: 3px;
+    }
+    #carousel.fullscreen {
+        z-index: 101;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+    #carousel .prev,
+    #carousel .next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--bg-color);
+        font-size: 48px;
+        cursor: pointer;
+        text-shadow: 2px 2px 5px var(--shadow-color);
+    }
+    #carousel .prev:hover i,
+    #carousel .next:hover i {
+        transform: scale(1.1);
+    }
+    #carousel .prev {
+        left: 0;
+    }
+    #carousel .next {
+        right: 0;
+    }
+    #carousel > .item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #carousel > .item > img {
+        margin: 1rem;
+        box-shadow: 2px 2px 7px var(--shadow-color);
+        max-width: 95%;
+        max-height: 70vh;
+    }
+    #carousel.fullscreen > .item > img {
+        max-height: 95vh;
+    }
+    #carousel .close {
+        position: absolute;
+        display: none;
+        top: 12px;
+        right: 12px;
+        font-size: 48px;
+        color: var(--bg-color);
+        text-shadow: 2px 2px 5px var(--shadow-color);
+        cursor: pointer;
+    }
+    #carousel .close:hover {
+        transform: scale(1.1);
+    }
+    #carousel.fullscreen .close {
+        display: block;
+    }
+
     @media screen and (max-width: 1600px) {
-        main {
+        main > article {
             padding: 0 20%;
         }
     }
 
     @media screen and (max-width: 1024px) {
-        main {
+        main > article {
             padding: 0 10%;
         }
     }
@@ -281,7 +394,7 @@
             max-width: 80%;
         }
 
-        main {
+        main > article {
             padding: 0 1em;
         }
 
@@ -298,6 +411,24 @@
         .member > div {
             border-left: none;
             padding: 1em;
+        }
+
+        #carousel .prev {
+            padding-left: 0;
+            left: -12px;
+        }
+        #carousel .next {
+            padding-right: 0;
+            right: -12px;
+        }
+
+        #carousel.fullscreen .prev {
+            padding-left: 0;
+            left: 0;
+        }
+        #carousel.fullscreen .next {
+            padding-right: 0;
+            right: 0;
         }
     }
 </style>

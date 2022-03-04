@@ -35,6 +35,7 @@
         align-items: center;
         box-shadow: 2px 2px 7px var(--shadow-color);
         padding: 1rem;
+        z-index: 10;
     }
     #logo {
         height: 32px;
@@ -59,7 +60,6 @@
         margin: 0 0.5rem;
         border-radius: 3px;
         background-color: var(--bg-color);
-        border: 1px solid var(--bg-color-2);
         padding: 0.5rem 1rem;
         box-shadow: 0 0 0 var(--shadow-color);
         transition-property: transform, box-shadow;
